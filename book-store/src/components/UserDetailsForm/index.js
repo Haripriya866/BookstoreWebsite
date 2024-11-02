@@ -131,7 +131,11 @@ class UserDetailsForm extends Component {
     const { name, address, email, phone } = this.state;
     const userDetails = { name, address, email, phone };
 
-    const url = "http://localhost:3005/users"; // Post to your backend server
+    const url =
+      "https://bookstore-website-git-main-kanikeharipriyas-projects.vercel.app/api/users";
+
+    //  const url = "http:localhost:3005/users";
+
     const options = {
       method: "POST",
       headers: {
