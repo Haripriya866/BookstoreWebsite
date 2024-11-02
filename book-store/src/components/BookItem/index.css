@@ -1,0 +1,74 @@
+.books-list-item{
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0px 1px 2px 0px hwb(135 27% 72%);
+    border-radius:12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:260px;
+    height:260px;
+    padding: 10px;
+  }
+  @media screen and (min-width:768px){
+    .books-list-item{
+        margin-right: 20px;
+        box-shadow:1px 2px 3px 0px hwb(135 27% 72%);
+        padding:14px;
+        width:300px;
+    }
+  }
+
+.book-item-title{
+    font-family:'Roboto';
+    font-size: 12px;
+    color:black;
+    font-weight: 600;
+    text-align: center;
+}
+@media screen and (min-width:768px){
+    .book-item-title{
+        font-size: 16px;
+    }
+}
+.link-book-item{
+    text-decoration: none;
+}
+.book-item-subtitle{
+    font-family:'Roboto';
+    font-size: 12px;
+    color:#7988e8;
+    font-weight: 300;
+    text-align: center;
+}
+@media screen and (min-width:768px){
+    .book-item-subtitle{
+        font-size: 16px;
+    }
+}
+.book-item-price{
+    font-family:'Roboto';
+    font-size: 12px;
+    color:black;
+    font-weight: 600;
+    text-align: center;
+}
+@media screen and (min-width:768px){
+    .book-item-price{
+        font-size: 16px;
+    }
+}
+.book-item-image{
+    width:80px;
+    height:80px;
+    border-radius: 10px;
+}
+@media screen and (min-width:768px){
+    .book-item-image{
+        width:100px;
+        height: 100px;
+    }
+}
+

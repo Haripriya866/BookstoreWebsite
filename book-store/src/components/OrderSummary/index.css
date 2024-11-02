@@ -1,0 +1,100 @@
+
+.order-summary{
+    box-shadow:0px 2px 2px 0px #707173;
+    border-radius:12px;
+    padding:10px;
+    margin-top:60px;
+    margin-right: 20px;
+    max-width:600px;
+    width:200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (min-width:768px){
+    .order-summary{
+        width:320px;
+    }
+}
+.order-summary-heading{
+    font-family: 'Roboto';
+    font-size:16px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+@media screen and (min-width:768px){
+    .order-summary-heading{
+        font-size: 30px;
+    }
+}
+.price-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.amount-payable-para{
+    font-family: 'Roboto';
+    font-size:10px;
+    color: black;
+    font-weight: 600;
+}
+@media screen and (min-width:768px){
+    .amount-payable-para{
+        font-size: 16px;
+    }
+}
+.order-summary-inclusive-taxes{
+    font-family: 'Roboto';
+    font-size:10px;
+    color: #292726;
+}
+@media screen and (min-width:768px){
+    .order-summary-inclusive-taxes{
+        font-size: 16px;
+    }
+}
+.order-summary-total-price{
+    font-family: 'Roboto';
+    font-size:10px;
+    color: black;
+    font-weight: 600;
+    margin-left:20px;
+}
+@media screen and (min-width:768px){
+    .order-summary-total-price{
+        font-size: 16px;
+    }
+}
+
+.order-summary-button{
+    background-color: black;
+    color:white;
+    font-family:'Roboto';
+    font-size:10px;
+    font-weight: 600;
+    width:56px;
+    height: 30px;
+    border-radius:8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding:2px 6px 2px 6px;
+    margin-top:14px;
+    margin-bottom:14px;
+}
+@media screen and (min-width:768px){
+    .order-summary-button{
+        padding: 4px 12px 4px 12px;
+        font-size: 16px;
+        border-radius: 12px;
+        width:100px;
+        height: 46px; 
+        margin-top:26px;
+        margin-bottom:26px;  
+    }
+}
+

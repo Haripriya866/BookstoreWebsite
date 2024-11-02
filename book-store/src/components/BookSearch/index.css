@@ -1,0 +1,230 @@
+/* Container Styling */
+.book-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .book-search-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Search Form Styling */
+  .book-search-form {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+  }
+  
+  .book-search-input {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .book-search-input:focus {
+    border-color: #007bff;
+  }
+  
+  .book-search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-search-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Book List Styling */
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .book-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .book-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .book-price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .search-input-container{
+    display: flex;
+    width:300px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-width: 0px;
+  }
+  .search-input{
+    width:90%;
+    height: 100%;  
+  }
+  
+ .search-button{
+    background-color: black;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:4px 12px 4px 12px;
+ }
+ @media screen and (min-width:768px){
+    .search-input-alignment{
+        display: flex;
+        justify-content: center;
+    }
+ }
+ .search-icon{
+    color:white;
+    width:25px;
+    height:25px;
+    font-size: 14px;
+    font-weight:600;
+ }
+.book-search-list-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+}
+@media screen and (min-width:768px){
+    .book-search-list-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+  .book-search-list-item{
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0px 1px 2px 0px hwb(135 27% 72%);
+    border-radius:12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width:260px;
+    height:300px;
+    padding: 10px;
+  }
+  @media screen and (min-width:768px){
+    .book-search-list-item{
+        margin-right: 20px;
+        box-shadow:1px 2px 3px 0px hwb(135 27% 72%);
+        padding:14px;
+    }
+  }
+
+  .book-search-title{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+  }
+  @media screen and (min-width:768px){
+    .book-search-title{
+        font-size: 18px;
+    }
+  }
+  .book-search-subtitle{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:black;
+    text-align: center;
+  }
+  @media screen and (min-width:768px){
+    .book-search-subtitle{
+        font-size: 18px;
+    }
+  }
+  .book-search-img{
+    width:80px;
+    height: 80px;
+  }
+  @media screen and (min-width:768px){
+    .book-search-img{
+        width:120px;
+        height: 120px;
+    }
+  }
+  .book-search-price{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  @media screen and (min-width:768px){
+    .book-search-price{
+        font-size: 18px;
+    }
+  }
+  .book-search-no-results-para{
+    font-family: 'Roboto';
+    font-size:12px;
+    color:black;
+    font-weight: bold;
+    margin:10px;
+  }
+  @media screen and (min-width:768px){
+    .book-search-no-results-para{
+        font-size:18px;
+        
+    }
+  }

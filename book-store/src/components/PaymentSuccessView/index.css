@@ -1,0 +1,98 @@
+.payment-success-view-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.payment-img{
+    width: 48px;
+    height: 48px;
+    top: 208px;
+    left: 156px;
+    padding: 4.8px;
+    gap: 0px;
+    opacity: 0px;
+}
+@media screen and (min-width:768px){
+    .payment-img{
+        width: 80px;
+        height: 80px;
+        top: 372px;
+        left: 680px;
+        padding: 8px;
+    }
+}
+.payment-heading{
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    width: 192px;
+    height: 24px;
+    top: 280px;
+    left: 84px;
+    gap: 0px;
+    opacity: 0px;
+}
+@media screen and (min-width:768px){
+    .payment-heading{
+        width: 230px;
+        height: 32px;
+        top: 484px;
+        left: 605px;
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+.payment-para{
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #64748B;
+    width: 270px;
+    height: 48px;
+    top: 320px;
+    left: 45px;
+    gap: 0px;
+    opacity: 0px;
+}
+@media screen and (min-width:768px){
+    .payment-para{
+        width: 302px;
+        top: 540px;
+        left: 569px;
+        font-size: 16px;
+    }
+}
+.payment-button{
+    background-color:#ffe619 ;
+    color:black;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size:12px;
+    width: 131px;
+    height: 32px;
+    top: 400px;
+    left: 131px;
+    gap: 0px;
+    opacity: 0px;
+    border-radius:8px;
+    border-width: 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+@media screen and (min-width:768px){
+    .payment-button{
+        width: 123px;
+        height: 48px;
+        top: 740px;
+        left: 658.5px;
+        border-radius:12px;
+
+    }
+}
