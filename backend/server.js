@@ -12,6 +12,8 @@ app.use(
   })
 );
 
+app.options("*", cors()); // Enable CORS for all routes
+
 const path = require("path");
 app.use(express.json());
 
