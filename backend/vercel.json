@@ -1,5 +1,15 @@
 {
-    "rewrites": [{
-        "source": "/api/(.*)", "destination": "/api"
-    }]
-}
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "destination": "/api"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/users",
+        "dest": "/api/users"
+      }
+    ]
+  }
+  
