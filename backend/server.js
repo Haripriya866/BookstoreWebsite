@@ -7,6 +7,8 @@ const app = express();
 app.use(
   cors({
     origin: "https://bookstore-website-frontend.vercel.app", // Allow requests from this origin
+    methods: ["GET", "POST"], // Allow specific HTTP methods
+    credentials: true, // Allow cookies and authorization headers
   })
 );
 
