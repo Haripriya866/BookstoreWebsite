@@ -8,6 +8,7 @@ app.use(
   cors({
     origin: "https://bookstore-website-frontend.vercel.app", // Allow requests from this origin
     methods: ["GET", "POST"], // Allow specific HTTP methods
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true, // Allow cookies and authorization headers
   })
 );
