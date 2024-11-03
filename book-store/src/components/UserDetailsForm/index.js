@@ -134,7 +134,7 @@ class UserDetailsForm extends Component {
     // const url =
     //   "https://bookstore-website-git-main-kanikeharipriyas-projects.vercel.app/api/users";
 
-    const url = "https://localhost:3005/users";
+    const url = "http://localhost:3005/users";
 
     const options = {
       method: "POST",

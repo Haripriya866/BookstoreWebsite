@@ -30,8 +30,8 @@ const initializeDbAndServer = async () => {
 
 initializeDbAndServer();
 
-app.post("/users", async (req, res) => {
-  const { name, address, email, phone } = req.body;
+app.post("/users", async (request, response) => {
+  const { name, address, email, phone } = request.body;
 
   // Validate the received data
   if (!name || !address || !email || !phone) {
