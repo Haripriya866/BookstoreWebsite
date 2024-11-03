@@ -3,7 +3,12 @@ const cors = require("cors");
 const fetch = require("node-fetch");
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    origin: "https://bookstore-website-frontend.vercel.app", // Allow requests from this origin
+  })
+);
 
 const path = require("path");
 app.use(express.json());
