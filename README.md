@@ -5,7 +5,7 @@ ReactJS Full Stack Assignment - Interactive Bookstore Application
 The application should allow users to browse and search for books, view book details, add books to a shopping cart, and place an order.
 
 ## Demo
-bookstore-website-frontend.vercel.app
+Link: https://bookstore-website-frontend.vercel.app
 
 ## Tech Stack
 Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Git, and Github for hosting the repository.
@@ -30,6 +30,7 @@ Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Gi
 #### Nice to Have
 * implementing user authentication
 * when order is placed, cartList must get empty
+* When an order is placed, the application should display a PaymentSuccessView to the user, confirming their successful order placement. Additionally, the user's details should be stored in the SQLite database for record-keeping and future reference.This feature works as expected in the local development environment. However, on deployment, the paymentSuccessView does not display consistently, and user details may not be stored as intended.
   
 ### Guidelines to develop a project
 #### Must Have
