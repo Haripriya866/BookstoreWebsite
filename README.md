@@ -4,6 +4,9 @@ ReactJS Full Stack Assignment - Interactive Bookstore Application
 ## Objective
 The application should allow users to browse and search for books, view book details, add books to a shopping cart, and place an order.
 
+## Demo
+bookstore-website-frontend.vercel.app
+
 ## Tech Stack
 Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Git, and Github for hosting the repository.
 
