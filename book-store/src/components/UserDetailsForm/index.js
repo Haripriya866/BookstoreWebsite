@@ -132,9 +132,7 @@ class UserDetailsForm extends Component {
     const userDetails = { name, address, email, phone };
 
    
-    // const url = "http://localhost:3005/users";
-
-    const url = "https://bookstore-website-api.vercel.app/users";
+    const url = "http://localhost:3005/users";
 
     const options = {
       method: "POST",

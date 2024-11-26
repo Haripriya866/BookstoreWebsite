@@ -1,5 +1,5 @@
 import { Component } from "react";
-import {BsPlusSquare, BsDashSquare} from 'react-icons/bs'
+import { BsPlusSquare, BsDashSquare } from "react-icons/bs";
 
 import Loader from "../Loader";
 import Header from "../Header";
@@ -62,15 +62,15 @@ class BookDetails extends Component {
   };
 
   onDecrementQuantity = () => {
-    const {quantity} = this.state
+    const { quantity } = this.state;
     if (quantity > 1) {
-      this.setState(prevState => ({quantity: prevState.quantity - 1}))
+      this.setState((prevState) => ({ quantity: prevState.quantity - 1 }));
     }
-  }
+  };
 
   onIncrementQuantity = () => {
-    this.setState(prevState => ({quantity: prevState.quantity + 1}))
-  }
+    this.setState((prevState) => ({ quantity: prevState.quantity + 1 }));
+  };
 
   renderBookDetailsSuccessView = () => (
     <CartContext.Consumer>
@@ -78,8 +78,7 @@ class BookDetails extends Component {
         const { addCartItem } = value;
         const { bookDetailsData, quantity } = this.state;
 
-        const { title, subtitle, image, price, description } =
-          bookDetailsData;
+        const { title, subtitle, image, price, description } = bookDetailsData;
 
         const onClickAddToCart = () => {
           addCartItem({ ...bookDetailsData, quantity });
@@ -96,25 +95,25 @@ class BookDetails extends Component {
                   <p className="book-details-price">{price}</p>
 
                   <hr className="short-horizontal-line" />
-                <div className="quantity-container">
-                  <button
-                    type="button"
-                    className="quantity-controller-button"
-                    onClick={this.onDecrementQuantity}
-                    data-testid="minus"
-                  >
-                    <BsDashSquare className="quantity-controller-icon" />
-                  </button>
-                  <p className="quantity">{quantity}</p>
-                  <button
-                    type="button"
-                    className="quantity-controller-button"
-                    onClick={this.onIncrementQuantity}
-                    data-testid="plus"
-                  >
-                    <BsPlusSquare className="quantity-controller-icon" />
-                  </button>
-                </div>
+                  <div className="quantity-container">
+                    <button
+                      type="button"
+                      className="quantity-controller-button"
+                      onClick={this.onDecrementQuantity}
+                      data-testid="minus"
+                    >
+                      <BsDashSquare className="quantity-controller-icon" />
+                    </button>
+                    <p className="quantity">{quantity}</p>
+                    <button
+                      type="button"
+                      className="quantity-controller-button"
+                      onClick={this.onIncrementQuantity}
+                      data-testid="plus"
+                    >
+                      <BsPlusSquare className="quantity-controller-icon" />
+                    </button>
+                  </div>
 
                   <button
                     type="button"
@@ -169,4 +168,3 @@ class BookDetails extends Component {
   }
 }
 export default BookDetails;
-

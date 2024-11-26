@@ -1,17 +1,20 @@
 const express = require("express");
 const cors = require("cors");
 const fetch = require("node-fetch");
+const uuid = require("uuid");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
 
 const app = express();
-// app.use(cors());
-app.use(
-  cors({
-    origin: "https://bookstore-website-frontend.vercel.app", // Allow requests from this origin
-    methods: ["GET", "POST"], // Allow specific HTTP methods
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true, // Allow cookies and authorization headers
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://bookstore-website-frontend.vercel.app", // Allow requests from this origin
+//     methods: ["GET", "POST"], // Allow specific HTTP methods
+//     allowedHeaders: ["Content-Type", "Authorization"],
+//     credentials: true, // Allow cookies and authorization headers
+//   })
+// );
+app.use(cors());
 
 app.options("*", cors()); // Enable CORS for all routes
 
@@ -39,43 +42,66 @@ const initializeDbAndServer = async () => {
 };
 
 initializeDbAndServer();
-
+// USER DETAILS WHILE PLACING ORDER
 app.post("/users", async (request, response) => {
   const { name, address, email, phone } = request.body;
 
   // Validate the received data
   if (!name || !address || !email || !phone) {
-    return res.status(400).json({ error: "All fields are required" });
+    return response.status(400).json({ error: "All fields are required" });
   }
 
-  const sql =
-    "INSERT INTO users (`name`,`address`,`email`,`phone`) VALUES (?,?,?,?)";
-  const values = [name, address, email, phone];
+  const selectUserQuery = `SELECT * FROM users WHERE name = ?`;
+  const dbUser = await db.get(selectUserQuery, [name]);
 
-  try {
-    await db.run(sql, values);
+  if (dbUser === undefined) {
+    const sql =
+      "INSERT INTO users (`name`,`address`,`email`,`phone`) VALUES (?,?,?,?)";
+    await db.run(sql, [name, address, email, phone]);
+    response.status(200).json({ message: "User created successfully" });
+  } else {
+    return response.status(400).json({ error: "User already exists" });
+  }
+});
 
-    // Forward the request to GoRest API
-    const url = "https://gorest.co.in/public-api/users";
-    const options = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Authorization:
-          "Bearer 262a92254071a95568d328b153edf8570d3a6412a382dffee509c7f431839c7d", // Keep the token here in backend
-      },
-      body: JSON.stringify({ name, address, email, phone }),
-    };
+//USER REGISTRATION
+app.post("/register", async (request, response) => {
+  const { username, password } = request.body;
 
-    // Send request to GoRest API
-    const apiResponse = await fetch(url, options);
-    const jsonData = await apiResponse.json();
+  const selectUserQuery = `SELECT * FROM user_registration WHERE username = ?`;
+  const dbUser = await db.get(selectUserQuery, [username]);
+  if (dbUser === undefined) {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const userId = uuid.v4();
 
-    // Send response from GoRest API back to the client
-    response.status(apiResponse.status).json(jsonData);
-  } catch (err) {
-    console.error("Error:", err);
-    response.status(500).json({ error: err.message });
+    const query = `INSERT INTO user_registration (id, username, password) VALUES (?, ?, ?)`;
+    await db.run(query, [userId, username, hashedPassword]);
+    response.status(200).json({ message: "User created successfully" });
+  } else {
+    return response.status(400).json({ error: "User already exists" });
+  }
+});
+
+// USER LOGIN API
+app.post("/login", async (request, response) => {
+  const { username, password } = request.body;
+
+  const selectUserQuery = `SELECT * FROM user_registration WHERE username = ?`;
+  const dbUser = await db.get(selectUserQuery, [username]);
+
+  if (dbUser === undefined) {
+    return response.status(400).json({ error_msg: "Invalid username" });
+  } else {
+    const isPasswordMatched = await bcrypt.compare(password, dbUser.password);
+    if (isPasswordMatched === true) {
+      const payload = {
+        username: username,
+      };
+      const jwtToken = jwt.sign(payload, "MY_SECRET_KEY");
+      console.log(jwtToken);
+      response.status(200).json({ jwtToken });
+    } else {
+      return response.status(400).json({ error_msg: "Invalid password" });
+    }
   }
 });

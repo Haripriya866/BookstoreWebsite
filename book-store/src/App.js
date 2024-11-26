@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
 
+import Login from './components/Login'
 import Home from "./components/Home";
 import BookList from "./components/BookList";
 import BookDetails from "./components/BookDetails";
@@ -10,6 +11,8 @@ import NotFound from "./components/NotFound";
 import CartContext from "./context/CartContext";
 
 import ProtectedRoute from "./components/ProtectedRoute";
+
+import ProtectedRouteLogin from "./components/ProtectedRouteLogin"
 
 import "./App.css";
 
@@ -101,10 +104,11 @@ class App extends Component {
           }}
         >
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/books" component={BookList} />
-            <Route exact path="/books/:isbn13" component={BookDetails} />
-            <Route exact path="/cart" component={Cart} />
+          <Route exact path="/login" component={Login} />
+            <ProtectedRouteLogin exact path="/" component={Home} />
+            <ProtectedRouteLogin exact path="/books" component={BookList} />
+            <ProtectedRouteLogin exact path="/books/:isbn13" component={BookDetails} />
+            <ProtectedRouteLogin exact path="/cart" component={Cart} />
             <ProtectedRoute exact path="/checkout" component={Checkout} />
             <Route exact path="/not-found" component={NotFound} />
             <Redirect to="/not-found" />

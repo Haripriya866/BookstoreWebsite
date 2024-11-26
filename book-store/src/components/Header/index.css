@@ -84,4 +84,12 @@
     }
 }
 
-
+.logout-desktop-btn{
+    border:none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-bottom:15px;
+    margin-left: 0px;
+    
+}

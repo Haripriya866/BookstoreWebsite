@@ -49,7 +49,7 @@ class BookList extends Component {
       const formattedData = data.books.map((eachItem) => ({
         title: eachItem.title,
         subtitle: eachItem.subtitle,
-        price: parseFloat(eachItem.price.replace("$", "")) || 0, 
+        price: parseFloat(eachItem.price.replace("$", "")) || 0,
         image: eachItem.image,
         url: eachItem.url,
         isbn13: eachItem.isbn13,
@@ -135,10 +135,11 @@ class BookList extends Component {
   };
 
   handleSearchChange = (query) => {
-    this.setState({ query }, this.getBookListData); 
+    this.setState({ query }, this.getBookListData);
   };
 
   render() {
+   
     const { query } = this.state;
     return (
       <>

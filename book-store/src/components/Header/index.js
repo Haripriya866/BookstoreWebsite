@@ -1,12 +1,19 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { FaHome, FaBook, FaShoppingBag } from "react-icons/fa";
+import { IoLogOut } from "react-icons/io5";
+import Cookies from "js-cookie";
 
 import CartContext from "../../context/CartContext";
 
 import "./index.css";
 
 class Header extends Component {
+  onClickLogout = () => {
+    const { history } = this.props;
+    Cookies.remove("jwt_token");
+    history.replace("/login");
+  };
   renderCartItemsCount = () => (
     <CartContext.Consumer>
       {(value) => {
@@ -54,9 +61,17 @@ class Header extends Component {
               </li>
             </Link>
           </ul>
+          <button
+            type="button"
+            className="logout-desktop-btn"
+            onClick={this.onClickLogout}
+          >
+            <IoLogOut className="icon" />
+            <span className="icon-name">Logout</span>
+          </button>
         </div>
       </nav>
     );
   }
 }
-export default Header;
+export default withRouter(Header);

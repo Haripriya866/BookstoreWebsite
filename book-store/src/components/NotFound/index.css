@@ -3,12 +3,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: 92vh;
+    margin-bottom:10px;
   }
   
   .not-found-img {
     width: 140px;
-    height: 155px;
+    height: 140px;
     top: 140px;
     left: 110px;
     padding: 0px;
