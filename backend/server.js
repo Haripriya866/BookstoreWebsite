@@ -6,14 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const app = express();
-// app.use(
-//   cors({
-//     origin: "https://bookstore-website-frontend.vercel.app", // Allow requests from this origin
-//     methods: ["GET", "POST"], // Allow specific HTTP methods
-//     allowedHeaders: ["Content-Type", "Authorization"],
-//     credentials: true, // Allow cookies and authorization headers
-//   })
-// );
+
 app.use(cors());
 
 app.options("*", cors()); // Enable CORS for all routes
