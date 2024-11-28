@@ -5,6 +5,7 @@ ReactJS Full Stack Assignment - Interactive Bookstore Application
 The application should allow users to browse and search for books, view book details, add books to a shopping cart, and place an order.
 
 ## Demo
+
 Link: https://bookstore-website-frontend.vercel.app
 
 ## Tech Stack
@@ -14,23 +15,23 @@ Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Gi
 
 ### Functionality
 #### Must Have
-* Build a React JS application with multiple pages/components, including Home, Book Listing, Book Details, Shopping Cart, and Checkout pages.
+* Build a React JS application with multiple pages/components, including Login, Home, Book Listing, Book Details, Shopping Cart, and Checkout pages.
 * Implement features such as book search, book filtering, add to cart, remove from cart, and order placement.
+
 
 | Page            | Page Details                                                                                                             | Navigation                                                                            |
 |-----------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Login           | Login Form - authenticated userDetails - username and password                                                           | if username and password matches, then navigates to Home Page                         |
 | Home            | Header - links for pages Home, Book List, Cart, Banner-Heading, description, and "Explore Books" Button                  | -                                                                                     |
 | Book List       | Header-links for pages Home, Book List, Cart, Book Items-image,title,subtitle,price,Search (by title), Filter (by price) | "Book List" link in Header,"Explore Books" Button, "Back" Button in Book Details Page |
-| Book Details    | Book detailed information-image,title,subtitle,price,description,etc., "Add to cart" Button, "Back" button               | Each Book Item in Book List Page                                                      |
+| Book Details    | Book detailed information-image,title,subtitle,price,description,etc., "Add to cart" Button                              | Each Book Item in Book List Page                                                      |
 | Cart            | Cart Items, "Remove" Button, "Remove All" Button, Order Summary, "Checkout" Button                                       | "Cart" link in Header, "Back" Button in Checkout Page                                 |
-| Checkout        | "Back" button, Order Form - Personal Details - First Name, Last Name, Email, Mobile No., Place Order Button,             | Checkout in Cart                                                                      |
+| Checkout        | Order Form - Personal Details - First Name, Last Name, Email, Mobile No., Place Order Button,                            | Checkout in Cart                                                                      |
 
 
     
 #### Nice to Have
-* implementing user authentication
 * when order is placed, cartList must get empty
-* When an order is placed, the application should display a PaymentSuccessView to the user, confirming their successful order placement. Additionally, the user's details should be stored in the SQLite database for record-keeping and future reference.This feature works as expected in the local development environment. However, on deployment, the paymentSuccessView does not display consistently, and user details may not be stored as intended.
   
 ### Guidelines to develop a project
 #### Must Have
@@ -59,6 +60,7 @@ Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Gi
 
 | PAGE          | ROUTE        | PATH          |
 |---------------|--------------|---------------|
+| Login         | Login        | /login        |
 | Home          | Home         | /             |
 | Book List     | Book List    | /books        |
 | Book Details  | Book Details | /books/:isbn13|
@@ -68,6 +70,12 @@ Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Gi
 
 
 ### Routes & Components
+
+**Login**
+
+| Component      | Details                                                        | State                                         | API (IT Bookstore)       |
+|----------------|----------------------------------------------------------------|-----------------------------------------------|--------------------------|
+| Login          | Login Form - authenticated userDetails - username and password | username, password, showSubmitError, errorMsg | -                        |
 
 **Home**
 
@@ -133,7 +141,7 @@ Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Gi
 
 ## Resources
 ## Design files
-Home, Book List, Book Details, Shopping Cart, Checkout
+Login, Home, Book List, Book Details, Shopping Cart, Checkout
 Reference: crossword.in
 
 ### APIS
@@ -144,6 +152,11 @@ API Reference: api.itbook.store
 Icons (react-icons)
 Loader (react-loader-spinner)
 Range slider (rc-slider)
+
+
+
+
+
 
 
 
