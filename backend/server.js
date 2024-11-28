@@ -35,6 +35,7 @@ const initializeDbAndServer = async () => {
 };
 
 initializeDbAndServer();
+
 // USER DETAILS WHILE PLACING ORDER
 app.post("/users", async (request, response) => {
   const { name, address, email, phone } = request.body;
