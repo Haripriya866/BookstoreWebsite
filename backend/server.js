@@ -10,9 +10,9 @@ app.use(
   cors({
     origin: "https://bookstore-website-frontend.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    allowedHeaders: ["Content-Type"],
     credentials: true,
-    optionsSuccessStatus: 200,
+    // optionsSuccessStatus: 200,
   })
 );
 
