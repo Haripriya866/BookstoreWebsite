@@ -1,6 +1,5 @@
 import { Component } from "react";
 import Cookies from 'js-cookie';
-// import CartContext from "../../context/CartContext";
 
 import "./index.css";
 
