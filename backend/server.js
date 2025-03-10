@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 const app = express();
 app.use(
   cors({
-    origin: "",
+    origin: "https://bookstore-website-frontend.vercel.app/login",
     method: ["POST", "GET", "PUT", "DELETE","OPTIONS"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
