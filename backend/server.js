@@ -10,16 +10,17 @@ app.use(
   cors({
     origin: "https://bookstore-website-frontend.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE","OPTIONS"],
-    credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   })
 );
 
 
 app.options("*", cors()); // Enable CORS for all routes
 
-const path = require("path");
 app.use(express.json());
+const path = require("path");
+
 
 const dbPath = path.join(__dirname, "login.db");
 const { open } = require("sqlite");
@@ -137,3 +138,5 @@ app.post("/login", async (request, response) => {
     }
   }
 });
+
+module.exports = app;
