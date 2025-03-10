@@ -1,0 +1,92 @@
+.book-list-container{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    width:70%;
+    flex-wrap: wrap;
+}
+.book-search-container{
+    display: flex;
+    align-items: flex-end;
+}
+@media screen and (max-width:767px){
+    .book-list-container{
+        flex-direction: column;
+    }
+}
+.booksList-loader-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:20px;
+}
+.range-filter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:250px;
+    margin:20px;
+}
+@media screen and (min-width:768px){
+    .range-filter-container{
+        margin:40px;
+    }
+}
+.price-range{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-bottom:40px;
+}
+.bookslist-main-heading{
+    font-family:'Roboto';
+    font-size: 20px;
+    font-weight: bold;
+    color:black;
+}
+@media screen and (min-width:768px){
+    .bookslist-main-heading{
+        font-size:30px;
+    }
+}
+
+.book-search-list-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+}
+@media screen and (min-width:768px){
+    .book-search-list-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+.range-min{
+    font-size: 12px;
+    color: black;
+    font-family: 'Roboto';
+    margin-right:20px;
+    font-weight:500;
+}
+@media screen and (min-width:768px){
+    .range-min{
+        font-size:18px;
+    }
+}
+.range-max{
+    font-size: 12px;
+    color: black;
+    font-family: 'Roboto';
+    margin-right:10px;
+    font-weight:500;
+}
+@media screen and (min-width:768px){
+    .range-max{
+        font-size:18px;
+    }
+}

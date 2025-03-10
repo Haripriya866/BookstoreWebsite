@@ -1,0 +1,79 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+    margin-bottom:10px;
+  }
+  
+  .not-found-img {
+    width: 140px;
+    height: 140px;
+    top: 140px;
+    left: 110px;
+    padding: 0px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  @media screen and (min-width:768px){
+    .not-found-img{
+        width: 497px;
+        height: 497px;
+        top: 235px;
+        left: 586px;
+        padding: 0px;
+        gap: 0px;
+        opacity: 0px;
+    }
+  }
+  .not-found-para{
+    color:black;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    width: 312px;
+    height: 72px;
+    top: 363px;
+    left: 24px;
+    gap: 0px;
+    opacity: 0px;
+  }
+@media screen and (min-width:768px){
+    .not-found-para{
+        width: 530px;
+        height: 64px;
+        top: 644px;
+        left: 455px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+  .not-found-button{
+    background-color:#ffe619 ;
+    color:black;
+    font-family: 'Roboto';
+    font-weight: bold;
+    width: 98px;
+    height: 32px;
+    top: 467px;
+    left: 131px;
+    gap: 0px;
+    opacity: 0px;
+    border-radius:8px;
+    border-width: 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+@media screen and (min-width:768px){
+    .not-found-button{
+        width: 123px;
+        height: 48px;
+        top: 740px;
+        left: 658.5px;
+        border-radius:12px;
+    }
+}
