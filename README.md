@@ -6,10 +6,10 @@ The application should allow users to browse and search for books, view book det
 
 ## Demo
 
-Link: https://bookstore-website-frontend.vercel.app
+Link:  https://bookstore-website-frontend.vercel.app
 
 ## Tech Stack
-Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Git, and Github for hosting the repository.
+Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Git, and vercel for hosting the repository.
 
 ## Completion Instructions
 
@@ -28,10 +28,6 @@ Use ReactJS, React Router, Redux or React Context API, CSS or CSS frameworks, Gi
 | Cart            | Cart Items, "Remove" Button, "Remove All" Button, Order Summary, "Checkout" Button                                       | "Cart" link in Header, "Back" Button in Checkout Page                                 |
 | Checkout        | Order Form - Personal Details - First Name, Last Name, Email, Mobile No., Place Order Button,                            | Checkout in Cart                                                                      |
 
-
-    
-#### Nice to Have
-* when order is placed, cartList must get empty
   
 ### Guidelines to develop a project
 #### Must Have
